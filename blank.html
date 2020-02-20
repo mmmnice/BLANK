@@ -1,11 +1,15 @@
 <html>
 <head>
 <script>
-alert('HELLO!');
+function  hello(){alert('HELLO!');}
+
 </script>
 </head>
 <body>
-  <h1> does this work? </h1>
-  
+  <h1 onmouseover="hello()"> does this work? </h1>
+  <!-- registering functions to an event -->
+  <input type="text" onkeypress="hello()">
+  <button onclick="hello()">wow</button>
+
 </body>
 </html>
