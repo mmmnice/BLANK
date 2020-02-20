@@ -1,0 +1,32 @@
+<html>
+<head>
+  <script type = "text/javascript">
+
+      //query the entire htnl file, then this event will trigger.  Websites only executes this until all of the website is loaded.
+
+//"when all resources are downloaded, then execute teh function"
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelector("button").onclick=inc;
+    })
+    let counter=0;
+    function inc(){
+      counter=counter+1;
+
+      document.querySelector("#score").innerHTML =`Score: ${counter}`;
+
+      if (counter>=10){
+        counter=0;
+        document.querySelector("#score").innerHTML = "You in";
+      }
+    }
+
+
+
+    </script>
+
+</head>
+<body>
+  <h1 id="score"> Score: 0 </h1>
+  <button> click to score  a point </button>
+</body>
+</html>
