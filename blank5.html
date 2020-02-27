@@ -1,0 +1,23 @@
+<html>
+<head>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelector('#form').onsubmit=function(){
+        alert(document.querySelector("#message").value);
+      }
+
+      document.querySelector("#abutton").onclick = function(){
+        let message=document.querySelector("#message").value
+        alert(`${message} wo`)
+      }
+    })
+    </script>
+  </head>
+  <body>
+    <form id="form">
+      <input id = "message" type= "text"/>
+      <button id="abutton">abutton </button>
+      <input type="submit">
+      </form>
+  </body>
+</html>
